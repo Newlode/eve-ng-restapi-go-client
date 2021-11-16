@@ -23,17 +23,18 @@ type systemStatusResponse struct {
 
 /*
 SystemStatus contains information regarding the system status
+TODO: CPU, Disk, etc. should be int and not string
 */
 type SystemStatus struct {
 	Cached      int    `json:"cached"`
-	CPU         int    `json:"cpu"`
-	Disk        int    `json:"disk"`
-	Dynamips    int    `json:"dynamips"`
-	Iol         int    `json:"iol"`
-	Mem         int    `json:"mem"`
-	Qemu        int    `json:"qemu"`
+	CPU         string `json:"cpu"`      //! should be int
+	Disk        string `json:"disk"`     //! should be int
+	Dynamips    string `json:"dynamips"` //! should be int
+	Iol         string `json:"iol"`      //! should be int
+	Mem         string `json:"mem"`      //! should be int
+	Qemu        string `json:"qemu"`     //! should be int
 	Qemuversion string `json:"qemu_version"`
-	Swap        int    `json:"swap"`
+	Swap        string `json:"swap"` //! should be int
 	Version     string `json:"version"`
 }
 
